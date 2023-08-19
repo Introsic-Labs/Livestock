@@ -50,7 +50,9 @@ CUSTOM_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-
+    'allauth',
+    'allauth.account',
+    'crispy_forms',
 ]
 
 if DEBUG == "True":
@@ -114,6 +116,9 @@ DATABASES = {
     }
 }
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -133,6 +138,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -157,6 +170,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -167,3 +183,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_AGE = 86400
+
+
+################# ALLAUTH SETTINGS #################
+LOGIN_URL = 'account_login'
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_REDIRECT = '/'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_PASSWORD_MIN_LENGTH = 8
+ACCOUNT_LOGOUT_ON_GET = True
