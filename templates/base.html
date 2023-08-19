@@ -1,0 +1,232 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>
+        {% block title %}
+        
+        {% endblock title %}
+        Home - Kumaraguru Livestock Hackthon
+
+
+    </title>
+    <meta name="description" content="The kumaraguru Livestock Hackathon, India's first pioneering event in the field of diary, aims to foster innovation and create solutions by bringing together group of engineers and veterinarians organised by Kumaraguru Institutions partnered by EDF">
+    <link rel="icon" type="image/png" sizes="500x500" href="{% static 'assets/img/favicon.jpeg' %}">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Barlow.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Inter.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Poppins.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Roboto.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Faq-by-pomdre-faq.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Faq-by-pomdre.css' %}">
+<style>
+    .timeline-section {
+        position: relative;
+    }
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20%;
+      width: 25% !important;
+    }
+
+    swiper-slide:nth-child(odd) {
+      background: red;
+    }
+
+    .container .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .imp_dates {
+    transition: transform 1.5s ease-in-out;
+    }
+
+</style>
+<style>
+        @media (min-width: 992px){
+        .changed{
+            height: 800px !important;
+        }
+
+        .featured{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .changed{
+            height: 650px !important;
+        }
+        .featured{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    
+    @media (min-width: 1200px){
+        .changed{
+            height: 750px !important;
+        }
+
+        .featured{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+    }
+
+    @media (max-width: 767.98px) {
+        .changed{
+            height: 400px;
+        }
+        .featured{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+</style>
+
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+
+
+</head>
+
+<body style="overflow-x: hidden;">
+    <!-- Start: Navbar Centered Links -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-shrink py-3 navbar-light" id="mainNav" style="background: white;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center " href="/"><span><img class="img-fluid fluid dynamic-logo" src="{% static 'assets/img/KLH_black.jpeg' %} " style="max-height:50px;"></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#about">About</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" style="color: black;" href="#sponsors">Sponsors</a></li> -->
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#ps">Challenges</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#rewards">Rewards</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><!-- End: Navbar Centered Links -->
+    
+    {% block content %}
+    
+    {% endblock content %}
+
+    
+
+    <footer class="bg-primary-gradient" style="background: var(--bs-primary-text-emphasis);">
+        <div class="container py-4 py-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center text-lg-center d-flex flex-column align-items-center order-first align-items-lg-center order-lg-last">
+                    <div class="fw-bold d-flex align-items-center mb-2">
+                        <span style="color: var(--bs-body-bg);">
+                            <img style="max-height: 50px;" src="{% static 'assets/img/KI Logo-2.png' %}" alt="Kumaraguru Institutions">
+                        </span>
+                    </div>
+                    <p class="text" style="color: var(--bs-body-bg); padding-top: 20px;">
+                        Contact : 9159460001
+                        <br>
+                        Email : klh@kct.ac.in
+                    </p>
+                    <!-- <p class="text" style="color: var(--bs-body-bg); text-decoration: underline; margin-top: -15px;">
+                        Address
+                    </p>
+                    <p class="text" style="color: var(--bs-body-bg); margin-top: -15px;">
+                        Kumaraguru College of Technology,
+                        <br>
+                        Saravanampatti, Comibatore.
+                    </p> -->
+                    <p class="text" style="color: var(--bs-body-bg); margin-top: -15px;">
+                        Address : 
+                        Kumaraguru College of Technology,
+                        Saravanampatti, Coimbatore.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0" style="color: var(--bs-body-bg);">Copyright © 2023 Kumaraguru Institutions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"></li>
+                    <li class="list-inline-item"></li>
+                    <li class="list-inline-item"></li>
+                </ul>
+            </div>
+        </div>
+    </footer><!-- End: Footer Multi Column -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/bold-and-bright.js' %}"></script>
+    <script src="{% static 'assets/js/Faq-by-pomdre-faq.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script>
+        const carouselContainer = document.querySelector('.imp_dates');
+
+        const autoplayInterval = setInterval(function () {
+        carouselContainer.scrollLeft += 3; // Adjust the scroll amount as needed
+        }, 40); // Adjust the interval as needed
+
+        // Pause autoplay when hovering over the carousel
+        carouselContainer.addEventListener('mouseenter', function () {
+        clearInterval(autoplayInterval);
+        });
+
+        // Resume autoplay when mouse leaves the carousel
+        // carouselContainer.addEventListener('mouseleave', function () {
+        // autoplayInterval = setInterval(function () {
+        //     carouselContainer.scrollLeft += 3; // Adjust the scroll amount as needed
+        // }, 40); // Adjust the interval as needed
+        // });
+    </script>
+    <script>
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 15) {
+            //   change navebar color to #341849
+            $('.navbar').css('background-color', '#aac8bc');
+            $('.navbar').removeClass('bg-transparent');
+            $('.nav-link').css('color', 'white');
+            $('.dynamic-logo').attr('src', '{% static 'assets/img/KLH_white.webp' %}');
+
+            } else {
+            $('.navbar').css('background-color', 'transparent');
+            $('.navbar').addClass('bg-transparent');
+            $('.nav-link').css('color', '#341849');
+            $('.dynamic-logo').attr('src', '{% static 'assets/img/KLH_black.jpeg' %}');
+            }
+            
+            
+        });
+    </script>
+    <script>
+        const rulesModal = document.getElementById('#rules')
+            myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+    </script>
+    {% block extra_js %}
+    
+    {% endblock extra_js %}
+
+
+    
+</body>
+
+</html>
