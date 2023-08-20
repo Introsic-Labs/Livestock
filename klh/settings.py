@@ -63,9 +63,9 @@ if DEBUG == "True":
 
 else:
     
-        SANDBOX_APPS = [
-    
-        ]
+    SANDBOX_APPS = [
+
+    ]
 
 
 
